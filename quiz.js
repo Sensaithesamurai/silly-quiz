@@ -21,16 +21,14 @@ function hash(str) {
     return new Uint32Array([hash])[0].toString(36);
 }
 
-var questionSet = [["What is the capital of Wales?","10ow88p"],["What number are you thinking of between 0 and 100","19g"]];
+var questionSet = [["What happend in tianamen square on june 4th 1989?","z7qswd"],["Where did covid 19 virus come from","11f05nj"],["What is worst method of governing","d85yh1"],["Is there widespread food contamination in peoples republic of China","2pt"],["What is happening in the camps in Xinjiang","1evo8dy"]];
 
 function checkAnswer(answerNum){
     var response = "You were... ";
     if (questionSet[answerNum][1]==hash(document.getElementById("answer"+answerNum).value)){
-      response += "CORRECT YOU LEGEND!";
+      response += "😁👍CORRECT + 3 SOCIAL CREDIT!";
     }
     else{
-      response += "WRONG YOU FOOL!";
+      response += "😡👎WRONG YOUR EXECUTION DATE IS TOMORROW!";
     }
-    document.getElementById("feedback"+answerNum).innerText = response;
-
-}
+    document.getElementById("feedback"+answerNum).innerText = response;}
