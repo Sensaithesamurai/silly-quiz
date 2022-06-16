@@ -22,10 +22,9 @@ function hash(str) {
 }
 
 var questionSet = [["What happend in tianamen square on june 4th 1989?","z7qswd"],["Where did covid 19 virus come from","11f05nj"],["What is worst method of governing","d85yh1"],["Is there widespread food contamination in peoples republic of China","2pt"],["What is happening in the camps in Xinjiang","1evo8dy"]];
-
 function checkAnswer(answerNum){
     var response = "You were... ";
-    if (questionSet[answerNum][1]==hash(document.getElementById("answer"+answerNum).value)){
+    if (questionSet[answerNum][1]==hash(document.getElementById("answer"+answerNum).value.toLowerCase())){
       response += "😁👍CORRECT + 3 SOCIAL CREDIT!";
     }
     else{
